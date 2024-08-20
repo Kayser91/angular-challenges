@@ -1,8 +1,10 @@
-import { Component, NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'lib-contact-dashboard',
+  standalone: true,
+  imports: [RouterLink],
   template: `
     Contact Dashboard
 
@@ -13,12 +15,4 @@ import { RouterModule } from '@angular/router';
     </button>
   `,
 })
-export class ContactDashboardComponent {}
-
-@NgModule({
-  imports: [
-    RouterModule.forChild([{ path: '', component: ContactDashboardComponent }]),
-  ],
-  declarations: [ContactDashboardComponent],
-})
-export class ContactDashboardModule {}
+export default class ContactDashboardComponent {}
